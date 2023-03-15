@@ -10,7 +10,7 @@ app.debug = bool(os.environ.get('DEBUG'))
 
 @app.route('/api/alpha/generate')
 def default():
-    pwd = []
+    pw = []
     length = request.args.get('length', type=int, default=8)
     count = request.args.get('count', type=int, default=1)
     use_digits = True if request.args.get(
@@ -23,7 +23,10 @@ def default():
         'use_lowercase', default='true').lower() == 'true' else False
 
     for _ in range(count):
-        pwd.append(generate_password(length, use_digits,
-                   use_symbols, use_uppercase, use_lowercase))
+        pw.append(generate_password(length, use_digits,
+                                    use_symbols, use_uppercase,
+                                    use_lowercase))
 
-    return {'success': True, 'content': pwd}
+    response = {'pws': pw, 'success': True}
+
+    return response
