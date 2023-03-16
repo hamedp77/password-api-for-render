@@ -5,7 +5,6 @@ from flask import Flask, jsonify, request
 from generator import generate_password
 
 app = Flask(__name__)
-app.debug = bool(os.environ.get('DEBUG'))
 
 
 @app.route('/api/alpha/generate')
@@ -30,3 +29,7 @@ def default():
     response = {'pws': pw, 'success': True}
 
     return response
+
+
+if __name__ == '__main__':
+    app.run()
