@@ -1,6 +1,4 @@
-import os
-
-from flask import Flask, jsonify, request
+from flask import Flask, request
 
 from generator import generate_password
 
