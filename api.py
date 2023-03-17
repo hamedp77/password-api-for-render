@@ -3,6 +3,7 @@ from flask import Flask, request
 from generator import generate_password
 
 app = Flask(__name__)
+app.json.mimetype = 'application/json; charset=UTF-8'
 
 
 @app.route('/api/alpha/generate')
