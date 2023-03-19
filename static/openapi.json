@@ -1,0 +1,114 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "This API allows you to generate random passwords of various lengths and characters.",
+        "version": "alpha",
+        "title": "Pssword Generator"
+    },
+    "tags": [
+        {
+            "name": "generate",
+            "description": "Generate random passwords",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http://localhost:5000/api/alpha/docs"
+            }
+        }
+    ],
+    "paths": {
+        "/api/alpha/generate": {
+            "get": {
+                "tags": [
+                    "generate"
+                ],
+                "summary": "Generate password",
+                "description": "Returns one or more password with the specified parameters.",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "length",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "The lenght of the generated password(s) (Default=8)"
+                    },
+                    {
+                        "in": "query",
+                        "name": "count",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "The numbers of passwords to generate (Default=1)"
+                    },
+                    {
+                        "in": "query",
+                        "name": "use_digits",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Include digits in the password(s) (Default=true)"
+                    },
+                    {
+                        "in": "query",
+                        "name": "use_symbols",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Include symbols in the password(s) (Default=true)"
+                    },
+                    {
+                        "in": "query",
+                        "name": "use_uppercase",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "Include uppercase letters in the password(s) (Default=true)"
+                    },
+                    {
+                        "in": "query",
+                        "name": "use_lowercase",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "Include lowercase letters in the password(s) (Default=true)"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "pws": {
+                                            "type": "array",
+                                            "description": "List of passwords"
+                                        },
+                                        "success": {
+                                            "type": "boolean",
+                                            "description": "Whether request was successfull"
+                                        }
+                                    },
+                                "example": {
+                                        "pws": [
+                                            "h?U)6gT2r|H[",
+                                            "B!o@&#!7M4fl",
+                                            ";/zTlB}vp3D8"
+                                        ],
+                                        "success": true
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:5000"
+        }
+    ]
+}
