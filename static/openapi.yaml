@@ -23,11 +23,13 @@ paths:
           name: length
           schema:
             type: integer
+            minimum: 4
           description: The lenght of the generated password(s) (Default=8)
         - in: query
           name: count
           schema:
             type: integer
+            minimum: 1
           description: The numbers of passwords to generate (Default=1)
         - in: query
           name: use_digits
