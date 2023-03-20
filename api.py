@@ -6,7 +6,7 @@ from generator import generate_password
 app = Flask(__name__)
 app.json.mimetype = 'application/json; charset=UTF-8'
 
-SWAGGER_URL = '/api/docs'
+SWAGGER_URL = '/api/docs/'
 API_URL = '/static/openapi.yaml'
 
 swaggerui_blueprint = get_swaggerui_blueprint(
