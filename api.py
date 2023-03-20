@@ -1,4 +1,4 @@
-from flask import Flask, request, url_for
+from flask import Flask, request, redirect
 from flask_swagger_ui import get_swaggerui_blueprint
 
 from generator import generate_password
@@ -16,6 +16,13 @@ swaggerui_blueprint = get_swaggerui_blueprint(
 )
 
 app.register_blueprint(swaggerui_blueprint)
+
+
+@app.route('/')
+def index():
+    """ This route simply redirects / to SWAGGER_URL"""
+
+    return redirect(SWAGGER_URL)
 
 
 @app.route('/api/alpha/generate')
