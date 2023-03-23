@@ -62,7 +62,7 @@
                         "in": "query",
                         "name": "use_uppercase",
                         "schema": {
-                            "type": "integer"
+                            "type": "string"
                         },
                         "description": "Include uppercase letters in the password(s) (Default=true)"
                     },
@@ -70,7 +70,7 @@
                         "in": "query",
                         "name": "use_lowercase",
                         "schema": {
-                            "type": "integer"
+                            "type": "string"
                         },
                         "description": "Include lowercase letters in the password(s) (Default=true)"
                     }
