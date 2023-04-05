@@ -11,7 +11,7 @@
             "description": "Generate random passwords",
             "externalDocs": {
                 "description": "Find out more",
-                "url": "http://localhost:5000/api/alpha/docs"
+                "url": "https://pass-hamedp77.b4a.run/api/alpha/docs"
             }
         }
     ],
@@ -110,10 +110,7 @@
     },
     "servers": [
         {
-            "url": "http://localhost:5000"
-        },
-        {
-            "url": "http://127.0.0.1:5000"
+            "url": "https://pass-hamedp77.b4a.run"
         }
     ]
 }
