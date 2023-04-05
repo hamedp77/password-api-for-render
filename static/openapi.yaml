@@ -10,7 +10,7 @@ tags:
     description: Generate random passwords
     externalDocs:
       description: Find out more
-      url: "http://localhost:5000/api/docs"
+      url: "https://pass-hamedp77.b4a.run/api/docs"
 paths:
   /api/alpha/generate:
     get:
@@ -72,5 +72,4 @@ paths:
                   - ;/zTlB}vp3D8
                 success: true
 servers:
-  - url: "http://localhost:5000"
-  - url: "http://127.0.0.1:5000"
+  - url: "https://pass-hamedp77.b4a.run"
