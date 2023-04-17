@@ -10,7 +10,7 @@ tags:
     description: Generate random passwords
     externalDocs:
       description: Find out more
-      url: "https://pass-hamedp77.b4a.run/api/docs"
+      url: "https://password-api-docker.onrender.com/api/docs"
 paths:
   /api/alpha/generate:
     get:
@@ -72,4 +72,4 @@ paths:
                   - ;/zTlB}vp3D8
                 success: true
 servers:
-  - url: "https://pass-hamedp77.b4a.run"
+  - url: "https://password-api-docker.onrender.com"
