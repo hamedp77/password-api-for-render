@@ -11,7 +11,7 @@
             "description": "Generate random passwords",
             "externalDocs": {
                 "description": "Find out more",
-                "url": "https://pass-hamedp77.b4a.run/api/alpha/docs"
+                "url": "https://password-api-docker.onrender.com/api/alpha/docs"
             }
         }
     ],
@@ -110,7 +110,7 @@
     },
     "servers": [
         {
-            "url": "https://pass-hamedp77.b4a.run"
+            "url": "https://password-api-docker.onrender.com"
         }
     ]
 }
