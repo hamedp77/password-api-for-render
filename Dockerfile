@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 80
 
-CMD ["gunicorn", "-b", "0.0.0.0:80", "api:app"]
+CMD ["gunicorn", "api:app"]
